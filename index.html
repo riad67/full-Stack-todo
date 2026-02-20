@@ -1,0 +1,14 @@
+
+<!DOCTYPE html><html><head><title>Todo App</title></head><body><h2>Todo App</h2><inputtype="text"id="taskInput"placeholder="Enter task"><buttononclick="addTask()">Add</button><ulid="todoList"></ul><script>constAPI ="http://localhost:5000";asyncfunctionloadTodos() {const res =awaitfetch(API +"/todos");const data =await res.json();const list =document.getElementById("todoList");
+  list.innerHTML ="";
+  data.forEach(todo => {
+    list.innerHTML += `
+      <li>${todo.task}
+        <button onclick="deleteTask(${todo.id})">Delete</button>
+      </li>
+    `;
+  });
+}asyncfunctionaddTask() {const task =document.getElementById("taskInput").value;awaitfetch(API +"/todos", {method:"POST",headers: {"Content-Type":"application/json" },body:JSON.stringify({ task })
+  });loadTodos();
+}asyncfunctiondeleteTask(id) {awaitfetch(API +"/todos/" + id, {method:"DELETE" });loadTodos();
+}loadTodos();</script></body></html>
