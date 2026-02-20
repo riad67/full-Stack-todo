@@ -6,6 +6,7 @@
       <li>${todo.task}
         <button onclick="deleteTask(${todo.id})">Delete</button>
       </li>
+      <p> This is written by dale </p>
     `;
   });
 }asyncfunctionaddTask() {const task =document.getElementById("taskInput").value;awaitfetch(API +"/todos", {method:"POST",headers: {"Content-Type":"application/json" },body:JSON.stringify({ task })
