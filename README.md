@@ -13,7 +13,7 @@ A simple task manager built with React, FastAPI, and PostgreSQL. Create, edit, c
 
 ## Demo
 
-To add a video demo, upload the recording to a GitHub issue or pull request and paste the resulting video URL here. You can also commit a small video to the repository and link to it with Markdown. See the GitHub instructions below.
+[Watch the demo video](Demo_video/todo_poc.mp4)
 
 ## Tech stack
 
