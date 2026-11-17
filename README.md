@@ -13,7 +13,10 @@ A simple task manager built with React, FastAPI, and PostgreSQL. Create, edit, c
 
 ## Demo
 
-[Watch the demo video](Demo_video/todo_poc.mp4)
+
+https://github.com/user-attachments/assets/045e5f48-34d2-4987-9333-e5aa57147719
+
+
 
 ## Tech stack
 
@@ -161,9 +164,3 @@ Run these from the indicated directory:
 - **Frontend cannot reach the API:** Ensure Uvicorn is running, check [the health endpoint](http://localhost:8000/health), and verify `VITE_API_URL`.
 - **CORS error:** Add the exact frontend origin to `CORS_ORIGINS` in `backend/.env`, then restart the backend.
 - **Migration error:** Confirm PostgreSQL is healthy and the database URL is correct before rerunning `alembic upgrade head`.
-
-## Adding a demo video on GitHub
-
-One way to show an inline video is to open a GitHub issue or pull request, attach the video to its comment editor, and wait for GitHub to generate a URL. Copy that URL into the Demo section on its own line, then commit and push the README. You can discard the draft comment if the uploaded URL remains accessible; verify the video plays in the README after pushing.
-
-Alternatively, add a file such as `docs/demo.mp4` to the repository and use `[Watch the demo](docs/demo.mp4)` in the Demo section. GitHub's file and upload limits apply; the link opens the video rather than guaranteeing an inline player.
